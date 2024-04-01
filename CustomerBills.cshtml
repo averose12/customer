@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "CustomerBills";
+}
+
+
+<style>
+    table {
+        border: 1px solid;
+      /*  margin-left: 500px;*/
+        margin:auto;
+        padding: 100px;
+    }
+
+    td {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 15px;
+    }
+
+    th {
+        padding: 20px;
+    }
+
+    input {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        width: 100px;
+    }
+</style>
+<h1> Costumer's Bill</h1>
+<table>
+    <tr>
+        <td id="itm1">
+            TV
+        </td>
+        <td id="pTV"> 400.00</td>
+
+    </tr>
+    <tr>
+        <td id="itm2">VCR </td>
+        <td id="pVCR"> 220.00</td>
+    </tr>
+    <tr>
+        <td id="itm3">Remote Controllers</td>
+        <td id="premote"> 35.20</td>
+    </tr>
+    <tr>
+        <td id="itm4">CD Player</td>
+        <td id="pCD"> 300.00</td>
+    </tr>
+    <tr>
+        <td id="itm5">Tape Recorder </td>
+        <td id="ptape"> 150.00</td>
+    </tr>
+
+</table>
+<h2>Customer's Bill</h2>
+How many TVs were sold?
+<input type="number" id="tv" name="tv" max="50" min="0" />
+<br />
+How many VCR's were sold?
+<input type="number" id="vcr" name="vcr" max="50" min="0" />
+<br />
+How many remote Controllers were sold?
+<input type="number" id="remote" name="remote" max="50" min="0" />
+<br />
+How many CD's were sold?
+<input type="number" id="cd" name="cd" max="50" min="0" />
+<br />
+How many tape recorders were sold?
+<input type="number" id="tape" name="tape" max="50" min="0" />
+
+<br />
+
+<input type="submit" id="sbmt" value="Check Out" />
+
+<br />
+<div id="summary">
+    <table>
+        <tr>
+            <th>QTY</th>
+            <th>DESCRIPTION</th>
+            <th>UNIT PRICE</th>
+            <th>TOTAL PRICE</th>
+        </tr>
+        <tbody id="bills" name="bills"> </tbody>
+
+    </table>
+</div>
+<script src="~/Scripts/JQUERY/jquery-3.7.1.min.js"></script>
+<script src="~/Scripts/JQUERY/Costumer.js"></script>
+
+
+
+
