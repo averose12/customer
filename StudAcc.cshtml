@@ -1,0 +1,179 @@
+﻿
+@{
+    ViewBag.Title = "StudAcc";
+}
+
+<h2>StudAcc</h2>
+<style>
+    h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+    /*.box1 {
+        border: 1px solid;
+        margin-left: 100px;*/
+    /* padding: 5px;*/
+    /*width:400px;
+        text-align: center;
+    }*/
+    .box1 {
+        /*border: 1px solid;*/
+        margin-left: 100px;
+        /* padding: 5px;*/
+        width: 400px;
+        text-align: center;
+        float: left;
+    }
+
+    .box2 {
+        /*border: 1px solid;*/
+        margin-left: 100px;
+        /* padding: 5px;*/
+        width: 400px;
+        text-align: center;
+        float: left;
+    }
+
+    input[type=radio] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        background: transparent;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+
+    input[type=password], [type=number], [type=date], [type=text], [type=tel] {
+        width: 80%;
+        height: 30px;
+        margin-left: 8px;
+        margin-bottom: 10px;
+    }
+
+    select {
+        width: 80%;
+        height: 30px;
+        margin-left: 8px;
+        margin-bottom: 10px;
+    }
+
+    .clear-div {
+        clear: both; /* This will ensure that the div is displayed below any floated elements */
+        margin:auto;
+        text-align: center;
+    }
+
+    table {
+        border: 1px solid;
+        margin:auto;
+        text-align:left;
+
+    }
+
+    td {
+       padding: 10px 50px 5px 50px;
+        
+    }
+
+    th {
+        padding: 15px 50px 5px 50px;
+    }
+
+</style>
+
+<h1>Student's Account</h1>
+<section class="box1">
+    ID Number:
+    <input type="tel" id="id" name="idNumber" /><br />
+    Last Name:
+    <input type="text" id="lname" name="lastName" /><br />
+    First Name:
+    <input type="text" id="fname" name="firstName" /><br />
+    Gender:
+    <input type="radio" id="female" name="gender" value="1" />
+    Female
+    <input type="radio" id="male" name="gender" value="2" />
+    Male
+    <input type="radio" id="lgbtq" name="gender" value="3" />
+    LGBTQ+
+
+</section>
+<section class="box2">
+    Course Code:<select id="course" name="course">
+        <option disabled selected> Course</option>
+        <option value="1"> 0001</option>
+        <option value="2"> 0002</option>
+        <option value="3"> 0003</option>
+        <option value="4"> 0004</option>
+        <option value="5"> 0005</option>
+        <option value="6"> 0006</option>
+        <option value="7"> 0007</option>
+        <option value="8"> 0008</option>
+    </select><br />
+    Year:<select id="yr">
+        <option disabled selected> Year</option>
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+    </select><br />
+    Subject:
+    <input type="number" id="sub" name="sub" min="1" max="10" />
+    <h2>Assessments </h2>
+    Prelim:
+    <input type="radio" id="pre" name="assessment" value="1" />
+
+    Midterm
+    <input type="radio" id="mid" name="assessment" value="2" />
+
+    Semi-Finals
+    <input type="radio" id="semi" name="assessment" value="3" />
+
+    Finals
+    <input type="radio" id="final" name="assessment" value="4" />
+    <br />
+
+</section>
+<br />
+
+
+<div class="clear-div">
+    <br />
+    <input type="submit" id="btnclck" value="Total Fees" /><br />
+
+    <table id="summary">
+        <tr>
+            <th>Students Personal Information</th>
+        </tr>
+        <tbody id='all-info'></tbody>
+
+    </table>
+    <br />
+    <table id="educfees">
+        <tr>
+            <th>FEES</th>
+            <th>AMOUNT</th>
+
+        </tr>
+
+        <tbody id='fees-info'></tbody>
+
+    </table>
+    <div id="amounts">
+        Mode of Payment:<br />
+        <h3 id="cash" name="mode">Cash</h3>
+        <h3 id="check" name="mode">Check</h3>
+        <h3 id="credit" name="mode">Credit</h3>
+        Amount Tendered:
+        <input type="number" id="tendered" name="tendered" min="1" /><br />
+        <input type="submit" id="Save" value="Save" />
+    </div>
+
+</div>
+
+
+    <script src="~/Scripts/JQUERY/jquery-3.7.1.min.js"></script>
+    <script src="~/Scripts/JQUERY/StudentsAcc.js"></script>
+ 

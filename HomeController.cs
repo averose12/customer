@@ -120,42 +120,169 @@ namespace ASPNETact.Controllers
         {
             return View();
         }
-         public ActionResult StudentsAcc1()
+        // public ActionResult StudentsAcc2()
+        //{
+        //    var data = new List<object>();
+
+        //    // Retrieve data from request parameters
+        //    var IDnum = Request["IDnum"];
+        //    var LastName = Request["LastName"];
+        //    var FrstName = Request["FrstName"];
+        //    var Gnder = Request["Gnder"];
+        //    var CodeCourse = Request["CodeCourse"];
+        //    var Years = Request["Years"];
+        //    var Subjects = Request["Subjects"];
+        //    var TotalUnits = Request["TotalUnits"];
+        //    var TuitionPerUnit = Request["TuitionPerUnit"];
+        //    var TotalTuition = Request["TotalTuition"];
+        //    var Registration = Request["Registration"];
+        //    var Miscellaneous = Request["Miscellaneous"];
+        //    var LabFees = Request["LabFees"];
+        //    var TotalFeesCourse = Request["TotalFeesCourse"];
+        //    var Assessment = Request["Assessment"];
+        //    var TotalFee = Request["TotalFee"];
+        //    var Balance = Request["Balance"];
+        //    var Pesos = Request["Pesos"];
+        //    var Centavos = Request["Centavos"];
+        //    var Results = Request["Results"];
+        //    var AmountPayS = Request["AmountPay"];
+        //    data.Add(new
+
+        //    {
+        //        mess = 1
+        //        //IDnum = IDnum,
+        //        //LastName = LastName,
+        //        //FrstName = FrstName,
+        //        //Gnder = Gnder,
+        //        //CodeCourse = CodeCourse,
+        //        //Years = Years,
+        //        //Subjects = Subjects,
+        //        //TotalUnits = TotalUnits,
+        //        //TuitionPerUnit = TuitionPerUnit,
+        //        //TotalTuition = TotalTuition,
+        //        //Registration = Registration,
+        //        //Miscellaneous = Miscellaneous,
+        //        //LabFees = LabFees,
+        //        //TotalFeesCourse = TotalFeesCourse,
+        //        //Assessment = Assessment,
+        //        //TotalFee = TotalFee,
+        //        //Balance = Balance,
+        //        //Pesos = Pesos,
+        //        //Centavos = Centavos,
+        //        //Results = Results,
+        //        //AmountPayS = AmountPayS
+        //    });
+        //    return Json(data, JsonRequestBehavior.AllowGet);
+
+
+        //}
+        public ActionResult SystemController()
         {
             var data = new List<object>();
-            var idNumber = Request["IDnum"];
-            var LstName = Request["LastName"];
-            var FirstName = Request["FrstName"];
-            var Genderss = Request["Gnder"];
-            var Code = Request["CodeCourse"];
-            var Yrs = Request["Years"];
-            var Sub = Request["Subjects"];
-            var TUnits = Request["TotalUnits"];
-            var TuitionUnit = Request["TuitionPerUnit"];
-            var Overalltuition = Request["TotalTuition"];
-            var regfees = Request["Registration"];
-            var miscfees = Request["Miscellaneous"];
-            var Labfees = Request["LabFees"];
-            var TFeesCourse = Request["TotalFeesCourse"];
-            var Assess = Request["Assessment"];
-            var OverallTotal = Request["TotalFee"];
-            var bal = Request["Balance"];
-            var dollar = Request["wordsDollar"];
-            var cents = Request["wordsCents"];
-            var results = Request["Results"];
-            var AmountPayS = Request["AmountPay"];
+
+            // Retrieve data from request parameters
+            var IDnum = Request["IDnum"];
+            var LastName = Request["LastName"];
+            var FrstName = Request["FrstName"];
+            var Gnder = Request["Gnder"];
+            var CodeCourse = Request["CodeCourse"];
+            var Years = Request["Years"];
+            var Subjects = Request["Subjects"];
+            var TotalUnits = Request["TotalUnits"];
+            var TuitionPerUnit = Request["TuitionPerUnit"];
+            var TotalTuition = Request["TotalTuition"];
+            var Registration = Request["Registration"];
+            var Miscellaneous = Request["Miscellaneous"];
+            var LabFees = Request["LabFees"];
+            var TotalFeesCourse = Request["TotalFeesCourse"];
+            var Assessment = Request["Assessment"];
+            var TotalFee = Request["TotalFee"];
+            var Balance = Request["Balance"];
+            var Pesos = Request["Pesos"];
+            var Centavos = Request["Centavos"];
+            var Results = Request["Results"];
+            var AmountPays = Request["AmountPay"];
             data.Add(new
             {
-                mess = 1
+                mess = 1,
+               // mess1 = FrstName + " your change is "+ Results +"Thank you for Paying",
+                IDnum = IDnum,
+                LastName = LastName,
+                FrstName = FrstName,
+                Gnder = Gnder,
+                CodeCourse = CodeCourse,
+                Years = Years,
+                Subjects = Subjects,
+                TotalUnits = TotalUnits,
+                TuitionPerUnit = TuitionPerUnit,
+                TotalTuition = TotalTuition,
+                Registration = Registration,
+                Miscellaneous = Miscellaneous,
+                LabFees = LabFees,
+                TotalFeesCourse = TotalFeesCourse,
+                Assessment = Assessment,
+                TotalFee = TotalFee,
+                Balance = Balance,
+                Pesos = Pesos,
+                Centavos = Centavos,
+                Results = Results,
+                AmountPays = AmountPays
             });
+                return Json(data, JsonRequestBehavior.AllowGet);
+          }
+        public ActionResult Gibo()
+        {
+            return View();
+        }
+        public ActionResult StudControl()
+        {
+            var data = new List<object>();
+
+            var id = Request["id"];
+            var lname = Request["lname"];
+            var fname = Request["fname"];
+            var gender = Request["gender"];
+            var course = Request["course"];
+            var coursename = Request["coursename"];
+            var yrlvl = Request["yrlvl"];
+            var subject = Request["subject"];
+            var totalunits = Request["totalunits"];
+            var tuition = Request["tuition"];
+            var totaltuition = Request["totaltuition"];
+            var reg = Request["reg"];
+            var misc = Request["misc"];
+            var lab = Request["lab"];
+            var totalcost = Request["totalcost"];
+            var prelim = Request["prelim"];
+            var midterm = Request["midterm"];
+            var semis = Request["semis"];
+            var finals = Request["finals"];
+
+            var studData = new
+            {
+                id = id,
+                lname = lname,
+                fname = fname,
+                gender = gender,
+                course = course,
+                coursename = coursename,
+                yrlvl = yrlvl,
+                subject = subject,
+                totalunits = totalunits,
+                tuition = tuition,
+                totaltuition = totaltuition,
+                reg = reg,
+                misc = misc,
+                lab = lab,
+                totalcost = totalcost,
+                prelim = prelim,
+                midterm = midterm,
+                semis = semis,
+                finals = finals
+            };
+
+            data.Add(studData);
             return Json(data, JsonRequestBehavior.AllowGet);
-
-
-
-
-
-
-
         }
 
 
